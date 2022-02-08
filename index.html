@@ -11,6 +11,23 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function cartao(){
+            let text = "Pretende continuar!\nEither OK or Cancel.";
+            let cartao = prompt("Digite o Numero do Cartao", "0000-0000-0000-0000");
+            if (cartao != null) {
+                document.getElementById("demo").innerHTML =
+                "Cartao " + cartao + "!SUCESSO";
+  }
+            if (confirm(text) == true) {
+                text = "You pressed OK!";
+            } else {
+                text = "You canceled!";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+    </script>
 
 </head>
 <body>
@@ -58,23 +75,64 @@
 
 <!-- about section starts  -->
 
-<section class="about" id="about">
+<section class="menu" id="menu">
 
     <h1 class="heading"> <span>Garantia</span> provisiria </h1>
 
-    <div class="row">
+     <div class="box-container">
 
+        <div class="box">
+            <h3>Limite maximo de 5.000.000,00 MT online.</h3>
+          <form action="">
+                <input type="text" placeholder="Nome da empresa*" >
+                <input type="text" placeholder="Nome da Entidade Contratante*">
+                <input type="number" placeholder="Numero Concurso*">
+                <input type="number" placeholder="Valor da Garantia*">
+            </form>
+        </div>
+
+        <div class="box">
+            <h3>Custo Automatico</h3>
+            <div class="price">99.99 MT<span>20.99</span></div>
+            <form action="">
+                <h1>seguradoras</h1>
+                <select name="seguradoras" id="content">
+                    <option value="volvo">Hollard</option>
+                    <option value="saab">Austral Seguros</option>
+                    <option value="opel">Palma Seguros</option>
+                </select>
+                <input type="submit" name="" value="Pagar" onclick="cartao()">
+            </form>
+            <h2 id="demo">O	custo é calculado como percentagem	do valor da	garantia</h2>
+            
+        </div>
+
+    </div>
+
+    <!--div class="row">
+         
         
 
         <div class="content">
             <form action="">
+
                 <input type="text" placeholder="Nome da empresa*" >
-                <input type="text" placeholder="Seguradora*">
+                <input type="text" placeholder="Nome da Entidade Contratante*">
+                <input type="number" placeholder="Numero Concurso*">
+                <input type="number" placeholder="Valor da Garantia*">
+                <select name="seguradoras" id="content">
+                    <option value="volvo">Hollard</option>
+                    <option value="saab">Austral Seguros</option>
+                    <option value="opel">Palma Seguros</option>
+                </select>
+                
                 <input type="submit" name="acao" value="Submeter">
             </form>
         </div>
 
-    </div>
+        
+
+    </div-->
 
 </section>
 
@@ -89,12 +147,14 @@
     <div class="box-container">
 
         <div class="box">
+            
           <form action="">
+                <input type="text" placeholder="Nome da Empresa*" >
                 <input type="text" placeholder="Nome da Entidade Contratante*" >
                 <input type="text" placeholder="Numero do Concurso*">
                 <input type="number" placeholder="Numero do Contrato, se Aplicavel*">
+                <input type="number" placeholder="Valor do Contrato*">
                 <input type="number" placeholder="Valor da Garantia*">
-                <input type="submit" name="acao" value="Submeter">
             </form>
         </div>
 
@@ -102,10 +162,16 @@
             <h3>Custo Automatico</h3>
             <div class="price">99.99 MT<span>20.99</span></div>
             <form action="">
-                <input type="number" placeholder="Cartão*">
-                <input type="submit" name="acao" value="Pagar">
+                <h1>seguradoras</h1>
+                <select name="seguradoras" id="content">
+                    <option value="volvo">Hollard</option>
+                    <option value="saab">Austral Seguros</option>
+                    <option value="opel">Palma Seguros</option>
+                </select>
+                <input type="number" placeholder="Contra Garantia*">
+                <input type="submit" name="" value="Pagar" onclick="cartao()">
             </form>
-            <h2>O	custo é calculado como percentagem	do valor da	garantia</h2>
+            <h2 id="demo">O	custo é calculado como percentagem	do valor da	garantia</h2>
             
         </div>
 
@@ -131,12 +197,18 @@
 
         <div class="box">
            <form action="">
+                  <h1>seguradoras</h1>
+                <select name="seguradoras" id="content">
+                    <option value="volvo">Hollard</option>
+                    <option value="saab">Austral Seguros</option>
+                    <option value="opel">Palma Seguros</option>
+                </select>
                 <input type="number" placeholder="Contra Garantia*">
-                <input type="submit" name="acao" value="Pagar">
+                <input type="submit" name="" value="Pagar" onclick="cartao()">
             </form>
             <h3>Custo Automatico</h3>
             <div class="price">99.99 MT<span>20.99</span></div>
-            <h2>O	custo é calculado como percentagem	do valor da	garantia</h2>
+            <h2 id="demo">O	custo é calculado como percentagem	do valor da	garantia</h2>
             
         </div>
 
@@ -307,7 +379,7 @@
         <a href="#contact">contact</a>
     </div>
 
-    <div class="credit">created by <span>mr.  Cornélio Marcelino </span> | all rights reserved</div>
+    <div class="credit">created by <span>MaliPay </span> | all rights reserved</div>
 
 </section>
 

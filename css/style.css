@@ -133,16 +133,15 @@ body{
     background: var(--bg);
 }
 
-section{
-    padding:2rem 7%;
-}
+
 
 .heading{
     text-align: center;
     color:#fff;
     text-transform: uppercase;
-    padding-bottom: 3.5rem;
+    padding-bottom: 12.5rem;
     font-size: 4rem;
+    top: 300px;
 }
 
 .heading span{
@@ -297,19 +296,20 @@ section{
 }
 
 .home{
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     background-size: #1A3D5A;
     background-position: center;
-}
+    position: absolute;
 
-.home{
-    max-width: 60rem;
+    right: -290px;
+    width: 800px
+    
 }
 
 .home h3{
-    font-size: 6rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color:#fff;
 }
@@ -394,6 +394,8 @@ section{
     color:var(--black);
 }
 
+
+
 .products .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -456,11 +458,11 @@ section{
 .review .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
+    
 }
 
 .review .box-container .box{
-    border:var(--border);
+    
     text-align: center;
     padding:3rem 2rem;
 }
